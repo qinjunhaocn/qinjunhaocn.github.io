@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  download:
+  auto-sync:
     runs-on: ubuntu-latest
 
     steps:
