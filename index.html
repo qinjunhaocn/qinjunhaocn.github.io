@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Geekerwan">
+    <link rel="icon" href="/favicon.ico">
+    <title id="name">SOCPK-极客湾移动芯片排行</title>
+</head>
+
+<body>
+    <div class="title">
+        <a style="display: flex;" href="https://space.bilibili.com/25876945/">
+            <img style="width: 130px;" src="icon-gkw.png" alt="极客湾">
+        </a>
+        移动芯片排行
+    </div>
+
+    <div class="cardContainer">
+        <a class="card cardWide" href="/cpucurve/gb6">
+            <img src="curve-phone-cpu.png" alt="手机CPU能效曲线">
+        </a>
+
+        <a class="card cardWide" href="/gpucurve/">
+            <img src="curve-phone-gpu.png" alt="手机GPU能效曲线">
+        </a>
+
+        <a class="card cardWide" href="/laptopgpucurve/">
+            <img src="curve-laptop-gpu.png" alt="笔记本显卡能效曲线">
+        </a>
+
+        <a class="card cardWide" href="/game/">
+            <img src="game-performance.png" alt="游戏能效表现">
+        </a>
+    </div>
+
+    <div class="cardContainer">
+        <a class="card cardWide" href="/allperf/">
+            <div class="cardWideTitle" style="color:#1DE7E1;">综合性能排行</div>
+            <img src="rank-total-score.png">
+        </a>
+
+        <a class="card cardWide" href="/cpu/">
+            <div class="cardWideTitle" style="color:#10B3F8;">CPU性能排行</div>
+            <img src="rank-cpu-score.png">
+        </a>
+
+        <a class="card cardWide" href="/gpu/">
+            <div class="cardWideTitle" style="color:#FFD101;">GPU性能排行</div>
+            <img src="rank-gpu-score.png">
+        </a>
+
+        <a class="card cardWide" href="/cpueffcrank/">
+            <div class="cardWideTitle" style="color:#CA7578;">CPU能效排行</div>
+            <img src="rank-cpu-eff.png">
+        </a>
+    </div>
+
+    <div class="cardContainer">
+        <a class="card cardSquare" href="/geekbench6/">
+            <img src="icon-gb6.png">
+            <div class="cardSquareTitle">GeekBench 6</div>
+        </a>
+
+        <a class="card cardSquare" href="/geekbench5/">
+            <img src="icon-gb5.png">
+            <div class="cardSquareTitle">GeekBench 5</div>
+        </a>
+
+        <a class="card cardSquare" href="/gfx/">
+            <img src="icon-gfxbench.png">
+            <div class="cardSquareTitle">Aztec Ruins</div>
+
+        </a>
+
+        <a class="card cardSquare" href="/3dmwle/">
+            <img src="icon-3dmark.png">
+            <div class="cardSquareTitle">Wildlife Extreme</div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.socpk.com">SOCPK源地址</a>
+        |
+        <a href="https://space.bilibili.com/25876945">极客湾Bilibili频道</a>
+        |
+        <a href="https://www.youtube.com/@geekerwan1024">YouTube频道</a>
+        |
+        <a href="https://m.tb.cn/h.515itVL?sm=bc166e">淘宝店</a>
+        |
+        <a href="https://www.bilibili.com/video/BV1bm4y117ba">数字生命游戏</a>
+    </div>
+
+</body>
+
+<link rel="stylesheet" href="index.css">
+
+<script>
+    var keyChar = "";
+    document.onkeydown = event => {
+        keyChar = (keyChar + "" + event.keyCode).slice(-24);
+        if (keyChar == "383840403739373966656665") {
+            alert("[滑稽]");
+        }
+    }; 
+</script>
+
+</html>

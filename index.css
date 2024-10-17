@@ -1,0 +1,116 @@
+body {
+    background: #000;
+    margin: 0;
+    padding-top: 60px;
+    max-width: 200vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+
+    color: #fff;
+}
+
+/* @font-face {
+    font-family: Bahnschrift-VF;
+    src: url(/Bahnschrift-VF.ttf);
+} */
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    row-gap: 10px;
+
+    font-size: 70px;
+    font-weight: bold;
+}
+
+/* -------------------------------- */
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardContainer>a {
+    text-decoration: none;
+    display: flex;
+}
+
+/* -------------------------------- */
+
+.card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #494949;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    background-color: #444;
+}
+
+.card>img {
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.cardWide {
+    height: 300px;
+    width: 600px;
+}
+
+.cardWideTitle {
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.cardSquare {
+    height: 300px;
+    width: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.cardSquareTitle {
+    margin-top: 15px;
+    color: #888;
+    font-size: 24px;
+    /* font-family: Bahnschrift-VF; */
+}
+
+/* -------------------------------- */
+
+.footer {
+    width: 100%;
+    background: #494949;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer>a {
+    color: unset;
+    margin: 0 20px;
+    text-decoration: none;
+}
