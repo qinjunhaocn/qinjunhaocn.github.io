@@ -1,0 +1,40 @@
+name: auto-sync
+
+on:
+  schedule:
+    - cron: "0 19 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "auto-sync"
+
+      - run: |
+          mkdir -p /temp/
+          > /temp/urls.txt
+          echo https://www.socpk.com >> /temp/urls.txt
+          echo https://www.socpk.com/cpucurve/gb6/ >> /temp/urls.txt
+          echo https://www.socpk.com/gpucurve/ >> /temp/urls.txt
+          echo https://www.socpk.com/laptopgpucurve/ >> /temp/urls.txt
+          echo https://www.socpk.com/game/ >> /temp/urls.txt
+          echo https://www.socpk.com/allperf/ >> /temp/urls.txt
+          echo https://www.socpk.com/cpu/ >> /temp/urls.txt
+          echo https://www.socpk.com/gpu/ >> /temp/urls.txt
+          echo https://www.socpk.com/cpueffcrank/ >> /temp/urls.txt
+          echo https://www.socpk.com/geekbench6/ >> /temp/urls.txt
+          echo https://www.socpk.com/geekbench5/ >> /temp/urls.txt
+          echo https://www.socpk.com/gfx/ >> /temp/urls.txt
+          echo https://www.socpk.com/3dmwle/ >> /temp/urls.txt
+          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --reject "*.ttf" --no-host-directories --input-file /temp/urls.txt
+          rm /temp/
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "auto sync"
+          git push origin auto
