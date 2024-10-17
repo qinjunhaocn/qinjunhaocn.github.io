@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="layout.css%3F12.css" rel="stylesheet" />	
+<link rel="icon" href="https://www.socpk.com/cpucurve/MAINPIC/favicon.ico">
+<title>CPU能效曲线</title>
+</head>
+<body id="mainLayout">
+<p class="downBtn" onclick="ChangeView('home')"><b>&lt;</b></p> 
+<p id="caption">能效曲线 - <b>CPU负载(GB6)</b></p>
+<p id="notice">*拆机使用Power Monitor + 假电池测量Geekbench 6多频点性能，减实时屏幕功耗得到主板功耗</p><br>
+<p style="text-align:center"><a style="color:#30B2F2;text-decoration:none;padding:8px 12px;border: 2px solid #30B2F2; border-radius:30px;margin-right:6px" href="https://www.socpk.com/log/">更新日志</a><a style="color:#30B2F2;text-decoration:none;padding:8px 12px;border: 2px solid #30B2F2; border-radius:30px;" href="https://www.socpk.com/cpucurve/">查看 Geekbench 5 能效曲线</a></p>
+
+<div style="position:relative;">
+		<img id='pics'  src="layer/CPU_axis.svg">
+		
+		<!--<img class="layer" name="cpufigure" style="position:absolute;" id="cpus8g2fg"  src="layer/cpu/CPU_gb6_SD8G2 For Galaxy.svg">-->
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpus8g3"  src="layer/cpu/CPU_gb6_SD8&#32;Gen3.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpus8g2"  src="layer/cpu/CPU_gb6_SD8&#32;Gen2.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpus7pg3"  src="layer/cpu/CPU_gb6_SD7+&#32;Gen3.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpus8p"   src="layer/cpu/CPU_gb6_SD8+&#32;Gen1.svg">
+
+		
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpue2400" src="layer/cpu/CPU_gb6_E2400.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cputg3" src="layer/cpu/CPU_gb6_Tensor&#32;G3.svg">
+        <img class="layer" name="cpufigure" style="position:absolute;" id="cpud9400" src="layer/cpu/CPU_gb6_D9400.svg">
+        <img class="layer" name="cpufigure" style="position:absolute;" id="cpud9300p" src="layer/cpu/CPU_gb6_D9300+.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpud9200p" src="layer/cpu/CPU_gb6_D9200+.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpud8300u" src="layer/cpu/CPU_gb6_D8300&#32;Ultra.svg">
+
+		
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpua18"  src="layer/cpu/CPU_gb6_A18.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpua18p"  src="layer/cpu/CPU_gb6_A18&#32;Pro.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpua17p"  src="layer/cpu/CPU_gb6_A17&#32;Pro.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpua16"   src="layer/cpu/CPU_gb6_A16.svg">
+		
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpuk9010" src="layer/cpu/CPU_gb6_K9010.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpuk9000s" src="layer/cpu/CPU_gb6_K9000S.svg">
+	    <img class="layer" name="cpufigure" style="position:absolute;" id="cpuk9000sl" src="layer/cpu/CPU_gb6_K9000SL.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="cpuk8000" src="layer/cpu/CPU_gb6_K8000.svg">
+        
+		
+</div>
+
+<div style="margin-left: 8%;">
+
+
+<p style="margin-top: 15px ">	
+<p style="margin: 50px auto">		
+	<a class="btnSwitch" name="switch"  style="color: white;background: black;" onclick="HideAll('cpu')">全部隐藏</a> 
+	<a class="btnSwitch" name="switch"  style="color: black;background: white;" onclick="ShowAll('cpu')">全部显示</a> 
+
+</p>
+ <!--   <button class="btnSwitch" name="cpu"  id="cpus8g2fgbtn" style="border-color:#FF40FF ;" onclick="ChangeView('cpus8g2fg')">-->
+	<!--	<b style="font-size: 20px;">骁龙8 Gen2 for Galaxy</b> -->
+	<!--	<a class="btnModule">三星S23</a>-->
+	<!--	<br>-->
+	<!--	<a class="btnModule">LPDDR5X 8533 / 台积电4nm</a>-->
+	<!--</button> -->
+	<hr style="width:90%;margin-right:10%">
+	<p style="color:white;font-size:30px;margin-bottom:3px">高通骁龙旗舰</p>
+	<button class="btnSwitch" name="cpu"  id="cpus8g3btn" style="border-color:#30f2f2 ;" onclick="ChangeView('cpus8g3')">
+		<b style="font-size: 20px;">8 Gen3</b> 
+		<a class="btnModule">小米14</a>
+		<br>
+		<a class="btnModule">LPDDR5X 8533 / 台积电4nm</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="cpus8g2btn" style="border-color:#79f2f2 ;" onclick="ChangeView('cpus8g2')">
+		<b style="font-size: 20px;">8 Gen2</b> 
+		<a class="btnModule">小米13</a>
+		<br>
+		<a class="btnModule">LPDDR5X 8533 / 台积电4nm</a>
+	</button> 
+
+	<button class="btnSwitch" name="cpu"  id="cpus8pbtn" style="border-color: #30d2f2;" onclick="ChangeView('cpus8p')">
+		<b style="font-size: 20px;">8+</b>
+		<a class="btnModule">Moto X30 Pro</a>
+		<br>
+		<a class="btnModule">LPDDR5 6400 / 台积电4nm</a>
+	</button>
+	
+
+	<br><br>
+	<hr style="width:90%;margin-right:10%">
+
+<p style="color:white;font-size:30px;margin-bottom:3px">高通骁龙中/高端</p>
+	<button class="btnSwitch" name="cpu"  id="cpus7pg3btn" style="border-color: #79DEF2;" onclick="ChangeView('cpus7pg3')">
+		<b style="font-size: 20px;">7+ Gen3</b>
+		<a class="btnModule">一加Ace 3V</a>
+		<br>
+		<a class="btnModule">LPDDR5X 8533 / 台积电4nm</a>
+	</button>
+	
+	<br><br><hr style="width:90%;margin-right:10%">
+
+	
+<p style="color:white;font-size:30px;margin:30px 0 3px 10px">联发科天玑旗舰</p>
+<button class="btnSwitch" name="cpu"  id="cpud9400btn" style="border-color: #F28D79;" onclick="ChangeView('cpud9400')">
+		<b style="font-size: 20px;">9400</b>
+		<a class="btnModule">OPPO Find X8 Pro</a>
+		<br>
+		<a class="btnModule">LPDDR5X 10667 / 台积电3nm</a>
+	</button> 
+<button class="btnSwitch" name="cpu"  id="cpud9300pbtn" style="border-color: #F28D79;" onclick="ChangeView('cpud9300p')">
+		<b style="font-size: 20px;">9300+</b>
+		<a class="btnModule">红米K70至尊版</a>
+		<br>
+		<a class="btnModule">LPDDR5X 8533 / 台积电4nm</a>
+	</button> 
+    <button class="btnSwitch" name="cpu"  id="cpud9200pbtn" style="border-color: #F2B679;" onclick="ChangeView('cpud9200p')">
+		<b style="font-size: 20px;">9200+</b>
+		<a class="btnModule">红米K60至尊版</a>
+		<br>
+		<a class="btnModule">LPDDR5X 8533 / 台积电4nm</a>
+	</button> 
+	
+<p style="color:white;font-size:30px;margin:30px 0 3px 10px">联发科天玑高端</p>	
+	<button class="btnSwitch" name="cpu"  id="cpud8300ubtn" style="border-color: #E57A7B ;" onclick="ChangeView('cpud8300u')">
+		<b style="font-size: 20px;">8300Ultra</b>
+		<a class="btnModule">红米K70E</a>
+		<br>
+		<a class="btnModule">LPDDR5X 8533 / 台积电4nm</a>
+	</button> 
+	
+	
+
+
+<br><br>
+<hr style="width:90%;margin-right:10%">
+
+<p style="color:white;font-size:30px;margin:30px 0 3px 10px">苹果</p>
+<button class="btnSwitch"  name="cpu" id="cpua18pbtn" style="border-color: #ccff33;" onclick="ChangeView('cpua18p')">
+		<b style="font-size: 20px;">A18 Pro</b>
+		<a class="btnModule">iPhone 16 Pro Max</a>
+		<br>
+		<a class="btnModule">LPDDR5X 7500 / 台积电3nm</a>
+	</button>
+<button class="btnSwitch"  name="cpu" id="cpua18btn" style="border-color: #bfff80;" onclick="ChangeView('cpua18')">
+		<b style="font-size: 20px;">A18</b>
+		<a class="btnModule">iPhone 16 Plus</a>
+		<br>
+		<a class="btnModule">LPDDR5X 7500 / 台积电3nm</a>
+	</button>
+<button class="btnSwitch"  name="cpu" id="cpua17pbtn" style="border-color: #66ff33;" onclick="ChangeView('cpua17p')">
+		<b style="font-size: 20px;">A17 Pro</b>
+		<a class="btnModule">iPhone 15 Pro</a>
+		<br>
+		<a class="btnModule">LPDDR5 6400 / 台积电3nm</a>
+	</button> 
+	<button class="btnSwitch"  name="cpu" id="cpua16btn" style="border-color: #80ff80;" onclick="ChangeView('cpua16')">
+		<b style="font-size: 20px;">A16</b>
+		<a class="btnModule">iPhone 14 Pro</a>
+		<br>
+		<a class="btnModule">LPDDR5 6400 / 台积电4nm</a>
+	</button>  
+	
+<br><br>	 
+ 
+ <hr style="width:90%;margin-right:10%">
+
+
+<p style="color:white;font-size:30px;margin:30px 0 3px 10px">华为麒麟</p>
+<button class="btnSwitch"  name="cpu" id="cpuk9010btn" style="border-color: #FF0000;" onclick="ChangeView('cpuk9010')">
+		<b style="font-size: 20px;">9010</b>
+		<a class="btnModule">华为Pura 70 Ultra</a>
+		<br>
+		<a class="btnModule">未知 / 未知</a>
+	</button>
+		<button class="btnSwitch"  name="cpu" id="cpuk9000sbtn" style="border-color: #FF0000;" onclick="ChangeView('cpuk9000s')">
+		<b style="font-size: 20px;">9000S</b>
+		<a class="btnModule">华为Mate X5</a>
+		<br>
+		<a class="btnModule">LPDDR5 6400 / 未知</a>
+	</button>
+
+	<button class="btnSwitch"  name="cpu" id="cpuk9000slbtn" style="border-color: #FF0000;" onclick="ChangeView('cpuk9000sl')">
+		<b style="font-size: 20px;">9000SL</b>
+		<a class="btnModule">华为nova 12 Ultra</a>
+		<br>
+		<a class="btnModule">LPDDR5 6400 / 未知</a>
+	</button>
+	<button class="btnSwitch"  name="cpu" id="cpuk8000btn" style="border-color: #FF0000;" onclick="ChangeView('cpuk8000')">
+		<b style="font-size: 20px;">8000</b>
+		<a class="btnModule">华为nova 12 Pro</a>
+		<br>
+		<a class="btnModule">LPDDR5 6400 / 未知</a>
+	</button>
+	
+	
+	<br><br>
+	
+	<hr style="width:90%;margin-right:10%">
+<p style="color:white;font-size:30px;margin:30px 0 3px 10px">三星猎户座</p>
+	<button class="btnSwitch"  name="cpu" id="cpue2400btn" style="border-color: #30B1F2;" onclick="ChangeView('cpue2400')">
+		<b style="font-size: 20px;">2400</b>
+		<a class="btnModule">三星S24(欧版)</a>
+		<br>
+		<a class="btnModule">LPDDR5X 未知 / 三星4nm</a>
+	</button>   
+
+ 
+<br><br>
+
+ 	<hr style="width:90%;margin-right:10%">
+    <p style="color:white;font-size:30px;margin:30px 0 3px 10px">谷歌Tensor</p>
+
+	<button class="btnSwitch"  name="cpu" id="cputg3btn" style="border-color: #30B1F2;" onclick="ChangeView('cputg3')">
+		<b style="font-size: 20px;">G3</b>
+		<a class="btnModule">Pixel 8 Pro</a>
+		<br>
+		<a class="btnModule">LPDDR5X 未知 / 三星4nm</a>
+	</button>  
+	
+	<br><br> 
+
+
+
+</div>	
+
+<script src="main.js%3F1"></script>
+  </body>
+</html> 

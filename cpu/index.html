@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="layout.css%3F22.css" rel="stylesheet" />	
+<script src="socIist.js%3Fj222223p22"></script>
+<script src="../html2canvas.min.js"></script>
+
+<title>CPU性能排行</title>
+<link rel="icon" href="../MAINPIC/favicon.ico">
+</head>
+<body id="mainLayout">
+<p class="downBtn" data-html2canvas-ignore style="float:left;padding:2px 23px 8px 20px;position:absolute;font-size:40px" onclick="ChangeView('home')"><b>&lt;</b></p> 	
+
+	<p id="caption">手机/平板芯片<b>CPU性能排行</b></p>
+ 
+	<p id="notice">权重：单核30%，多核权重70%。以骁龙865为基准</p>		
+	<p data-html2canvas-ignore style="text-align:center;padding:40px 0 10px 0">
+		<a class="downBtn"  id="btn1" onclick="ChangeView('all')"><b>全部</b></a> 
+		<a class="downBtn"  id="btn11" onclick="ChangeView('phone')"><b>仅手机</b></a> 
+		<a class="downBtn"  id="btn2" onclick="ChangeView('苹果')"><b>苹果</b></a> 
+		<a class="downBtn"  id="btn3" onclick="ChangeView('高通')"><b>高通</b></a> 
+		<a class="downBtn"  id="btn4" onclick="ChangeView('联发科')"><b>联发科</b></a> 
+		<a class="downBtn"  id="btn5" onclick="ChangeView('华为')"><b>华为</b></a> 
+
+	</p>
+	<script src="main.js%3F32b"></script>
+
+	<table class="data" id="mainForm" border="0"  style="margin-top:40px">		
+	<tr >
+		<td class="socName"></td>
+		<td class="logo"></td>
+		<td>
+			<div class="ratioBar" style="position:inherit;margin-top:-10px">
+				<div class="ratioLine" style="width:0%;"><div class="ratioLineHeight" style="background:#FFFFFF;">&nbsp;0%</div></div>
+				<div class="ratioLine" style="width:25%;"><div class="ratioLineHeight">&nbsp;100%</div></div>
+				<div class="ratioLine" style="width:50%;"><div class="ratioLineHeight">&nbsp;200%</div></div>
+				<div class="ratioLine" style="width:75%;"><div class="ratioLineHeight">&nbsp;300%</div></div>
+				<div class="ratioLine" style="width:100%;margin-bottom:30px;"><div class="ratioLineHeight">&nbsp;400%</div></div>
+
+			</div>
+		</td>					
+	</tr>
+	<script>
+	
+	ShowBar(brand);
+	DrawRatio();	
+	</script>
+	
+	
+	 
+        
+	</table>
+	<div class="floatBtn">
+		<img data-html2canvas-ignore id="downloadFigure" style="width: 100px;" onclick="DownloadFigure('CPUPerf')" src="../MAINPIC/savefigure.svg">
+	  </div>	
+	  <p id="author"></p>	
+		
+<!-- ="['"&A3&"','"&B3&"',"&G3&"]," -->
+<script>
+    
+    
+	
+</script>
+
+  </body>
+</html>
+
+
+
+
+
+

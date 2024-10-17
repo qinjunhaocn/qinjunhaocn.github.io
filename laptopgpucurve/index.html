@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="layout.css%3Fddddd.css" rel="stylesheet" />	
+<link rel="icon" href="../MAINPIC/favicon.ico">
+<title>笔记本显卡能效曲线</title>
+</head>
+<body id="mainLayout">
+<p class="downBtn" onclick="ChangeView('home')"><b>&lt;</b></p> 
+<p id="caption">能效曲线 - <b>笔记本显卡</b></p>
+<p id="notice">*所有显卡均根据官方默认设定，未进行超频&降压。测试时已尽可能排除外界因素干扰</p>
+
+<div style="position:relative;">
+		<img id='pics'  src="layer/cpu/CPU_2022_12_28_axis.svg">
+		<!--<img id='pics'  src="layer/cpu/axis.svg">-->
+ 
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX4090"  src="layer/cpu/RTX4090.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX4080"   src="layer/cpu/RTX4080.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX4070"   src="layer/cpu/RTX4070.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX4060"   src="layer/cpu/RTX4060.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX4050"   src="layer/cpu/RTX4050.svg">
+
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX3080Ti" src="layer/cpu/RTX3080Ti.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX3080" src="layer/cpu/RTX3080.svg">
+		
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX3070Ti"   src="layer/cpu/RTX3070Ti.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX3070"   src="layer/cpu/RTX3070.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX3060"  src="layer/cpu/RTX3060.svg">
+
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX3050Ti" src="layer/cpu/RTX3050Ti.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX3050"   src="layer/cpu/RTX3050.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX2050"   src="layer/cpu/RTX2050.svg">
+
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX2080Super" src="layer/cpu/RTX2080Super.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX2080"   src="layer/cpu/RTX2080.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX2080 Max-Q"   src="layer/cpu/RTX2080&#32;Max-Q.svg">
+
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX2070Super" src="layer/cpu/RTX2070Super.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX2070"   src="layer/cpu/RTX2070.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RTX2060"   src="layer/cpu/RTX2060.svg">
+
+		<img class="layer" name="cpufigure" style="position:absolute;" id="GTX1650" src="layer/cpu/GTX1650.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="GTX1080"   src="layer/cpu/GTX1080.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="GTX1070"   src="layer/cpu/GTX1070.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="GTX1060"   src="layer/cpu/GTX1060.svg">
+
+		<img class="layer" name="cpufigure" style="position:absolute;" id="MX550"   src="layer/cpu/MX550.svg">		
+
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RX 6850M XT" src="layer/cpu/RX&#32;6850M&#32;XT.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RX 6800M"   src="layer/cpu/RX&#32;6800M.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RX 6800S"   src="layer/cpu/RX&#32;6800S.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RX 6650M"   src="layer/cpu/RX&#32;6650M.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RX 6600M" src="layer/cpu/RX&#32;6600M.svg">
+		<img class="layer" name="cpufigure" style="position:absolute;" id="RX 6600S"   src="layer/cpu/RX&#32;6600S.svg">
+		
+</div>
+
+<div style="margin-left: 8%;">
+
+
+<p style="margin-top: 15px ">		
+	<button class="btnSwitch" name="cpu"  id="RTX4090btn" style="border-color:#FF0000 ;" onclick="ChangeView('RTX4090')">
+		<b style="font-size: 20px;">RTX4090</b>
+ 		<br>
+		<a class="btnModule">AD103</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX4080btn" style="border-color:#FF0000 ;" onclick="ChangeView('RTX4080')">
+		<b style="font-size: 20px;">RTX4080</b> 
+		<br>
+		<a class="btnModule">AD104</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX4070btn" style="border-color:#FF0000 ;" onclick="ChangeView('RTX4070')">
+		<b style="font-size: 20px;">RTX4070</b> 
+		<br>
+		<a class="btnModule">AD106</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX4060btn" style="border-color:#FF0000 ;" onclick="ChangeView('RTX4060')">
+		<b style="font-size: 20px;">RTX4060</b> 
+		<br>
+		<a class="btnModule">AD107</a>
+	</button> 
+
+	<button class="btnSwitch" name="cpu"  id="RTX4050btn" style="border-color:#FF0000 ;" onclick="ChangeView('RTX4050')">
+		<b style="font-size: 20px;">RTX4050</b> 
+		<br>
+		<a class="btnModule">AD107</a>
+	</button> 
+
+
+</p>
+
+<p style="margin-top: 10px ">		
+	<button class="btnSwitch" name="cpu"  id="RTX3080Tibtn" style="border-color: #007F5F;" onclick="ChangeView('RTX3080Ti')">
+		<b style="font-size: 20px;">RTX3080Ti</b>
+		<br>
+		<a class="btnModule">GA103</a>
+	</button> 
+
+
+
+	<button class="btnSwitch" name="cpu"  id="RTX3080btn" style="border-color: #2B9348;" onclick="ChangeView('RTX3080')">
+		<b style="font-size: 20px;">RTX3080</b>
+		<br>
+		<a class="btnModule">GA104</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX3070Tibtn" style="border-color: #55A630 ;" onclick="ChangeView('RTX3070Ti')">
+		<b style="font-size: 20px;">RTX3070Ti</b>
+		<br>
+		<a class="btnModule">GA104</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX3070btn" style="border-color:#80B918;" onclick="ChangeView('RTX3070')">
+		<b style="font-size: 20px;">RTX3070</b>
+		<br>
+		<a class="btnModule">GA104</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX3060btn" style="border-color:#AACC00 ;" onclick="ChangeView('RTX3060')">
+		<b style="font-size: 20px;">RTX3060</b>
+		<br>
+		<a class="btnModule">GA106</a>
+	</button>	
+	<button class="btnSwitch" name="cpu"  id="RTX3050Tibtn" style="border-color: #BFD200 ;" onclick="ChangeView('RTX3050Ti')">
+		<b style="font-size: 20px;">RTX3050Ti</b>
+		<br>
+		<a class="btnModule">GA107</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX3050btn" style="border-color: #D4D700;" onclick="ChangeView('RTX3050')">
+		<b style="font-size: 20px;">RTX3050</b>
+		<br>
+		<a class="btnModule">GA107</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RTX2050btn" style="border-color:#EEEF20 ;" onclick="ChangeView('RTX2050')">
+		<b style="font-size: 20px;">RTX2050</b>
+		<br>
+		<a class="btnModule">GA107</a>
+	</button>	
+
+
+</p>
+
+<p style="margin-top: 10px ">		
+	<button class="btnSwitch"  name="cpu" id="RTX2080Superbtn" style="border-color: #BA55D3;" onclick="ChangeView('RTX2080Super')">
+		<b style="font-size: 20px;">RTX2080Super</b>
+		<br>
+		<a class="btnModule">TU104</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="RTX2080btn" style="border-color:#A923FF;" onclick="ChangeView('RTX2080')">
+		<b style="font-size: 20px;">RTX2080</b>
+		<br>
+		<a class="btnModule">TU104</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="RTX2080 Max-Qbtn" style="border-color: #722EFD;" onclick="ChangeView('RTX2080 Max-Q')">
+		<b style="font-size: 20px;">RTX2080 Max-Q</b>
+		<br>
+		<a class="btnModule">TU104</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="RTX2070Superbtn" style="border-color: #006EF4;" onclick="ChangeView('RTX2070Super')">
+		<b style="font-size: 20px;">RTX2070Super</b>
+		<br>
+		<a class="btnModule">TU104</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="RTX2070btn" style="border-color: #006EF4;" onclick="ChangeView('RTX2070')">
+		<b style="font-size: 20px;">RTX2070</b>
+		<br>
+		<a class="btnModule">TU106</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="RTX2060btn" style="border-color: #01BEFF;" onclick="ChangeView('RTX2060')">
+		<b style="font-size: 20px;">RTX2060</b>
+		<br>
+		<a class="btnModule">TU106</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="GTX1650btn" style="border-color: #E5383B;" onclick="ChangeView('GTX1650')">
+		<b style="font-size: 20px;">GTX1650</b>
+		<br>
+		<a class="btnModule">TU117</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="MX550btn" style="border-color: #E571C4;" onclick="ChangeView('MX550')">
+		<b style="font-size: 20px;">MX550</b>
+		<br>
+		<a class="btnModule">TU117</a>
+	</button>  
+</p>  
+
+
+<p style="margin-top: 10px ">		
+	
+	<button class="btnSwitch"  name="cpu" id="GTX1080btn" style="border-color: #A4161A;" onclick="ChangeView('GTX1080')">
+		<b style="font-size: 20px;">GTX1080</b>
+		<br>
+		<a class="btnModule">GP104</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="GTX1070btn" style="border-color:#BA181B ;" onclick="ChangeView('GTX1070')">
+		<b style="font-size: 20px;">GTX1070</b>
+		<br>
+		<a class="btnModule">GP104</a>
+	</button>  
+	<button class="btnSwitch"  name="cpu" id="GTX1060btn" style="border-color:#FF7F50 ;" onclick="ChangeView('GTX1060')">
+		<b style="font-size: 20px;">GTX1060</b>
+		<br>
+		<a class="btnModule">GP106</a>
+	</button>  
+	
+
+</p>
+
+<p style="margin-top: 10px ">		
+	<button class="btnSwitch" name="cpu"  id="RX 6850M XTbtn" style="border-color: #BFBFBF;" onclick="ChangeView('RX 6850M XT')">
+		<b style="font-size: 20px;">RX 6850M XT</b>
+		<br>
+		<a class="btnModule">Navi 22</a>
+	</button> 
+
+	<button class="btnSwitch" name="cpu"  id="RX 6800Mbtn" style="border-color: #BFBFBF;" onclick="ChangeView('RX 6800M')">
+		<b style="font-size: 20px;">RX 6800M</b>
+		<br>
+		<a class="btnModule">Navi 22</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RX 6800Sbtn" style="border-color: #BFBFBF;" onclick="ChangeView('RX 6800S')">
+		<b style="font-size: 20px;">RX 6800S</b>
+		<br>
+		<a class="btnModule">Navi 23</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RX 6650Mbtn" style="border-color:#BFBFBF ;" onclick="ChangeView('RX 6650M')">
+		<b style="font-size: 20px;">RX 6650M</b>
+		<br>
+		<a class="btnModule">Navi 23</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RX 6600Mbtn" style="border-color: #BFBFBF;" onclick="ChangeView('RX 6600M')">
+		<b style="font-size: 20px;">RX 6600M</b>
+		<br>
+		<a class="btnModule">Navi 23</a>
+	</button> 
+	<button class="btnSwitch" name="cpu"  id="RX 6600Sbtn" style="border-color:#BFBFBF ;" onclick="ChangeView('RX 6600S')">
+		<b style="font-size: 20px;">RX 6600S</b>
+		<br>
+		<a class="btnModule">Navi 23</a>
+	</button>	
+
+	
+</p>  
+<p style="margin: 50px auto">		
+	<a class="btnSwitch" name="switch"  style="color: white;background: black;" onclick="HideAll('cpu')">全部隐藏</a> 
+	<a class="btnSwitch" name="switch"  style="color: black;background: white;" onclick="ShowAll('cpu')">全部显示</a> 
+
+</p>
+</div>	
+
+<script src="main.js%3F1"></script>
+  </body>
+</html> 

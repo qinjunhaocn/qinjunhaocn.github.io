@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="layout.css%3F1.css" rel="stylesheet" />	
+<script src="socIist.js%3F92223z1"></script> 
+<script src="../html2canvas.min.js"></script>
+
+<title>Geekbench 5 排行</title>
+<link rel="icon" href="../MAINPIC/favicon.ico">
+</head>
+<body id="mainLayout">
+	<p class="downBtn"  style="float:left;padding:2px 23px 8px 20px;position:absolute;font-size:40px" data-html2canvas-ignore onclick="ChangeView('home')"><b>&lt;</b></p> 	
+	<p id="caption">Geekbench 5 排行</p>
+
+	<!-- <div style="text-align:center;margin: -60px auto 40px auto;">
+		<a style="font-size:40px;color:#536EB7">■ </a><a style="color:white">单核</a>&emsp;&emsp;
+		<a style="font-size:40px;color:#95A7D3">■ </a><a style="color:white">多核</a>
+		</div> -->
+
+	<p style="text-align:center;padding-bottom:10px">
+		<a class="downBtn"  id="btn2" onclick="ChangeView('single')">单核排行</a> 
+		<a class="downBtn"  id="btn1" onclick="ChangeView('multi')">多核排行</a> 
+
+	</p>
+	<script src="main.js%3F2b"></script>
+	<table class="data" id="mainForm" border="0" style="margin-top:40px">		
+		<tr >
+		<td class="socName"></td>
+		<td class="logo"></td>
+		<td>
+			<div class="ratioBar" style="position:inherit;margin-top:-10px">
+				<div class="ratioLine" style="width:0%;"><div class="ratioLineHeight" style="background:#FFFFFF;">&nbsp;0</div></div>
+				<div class="ratioLine" style="width:25%;"><div class="ratioLineHeight">&nbsp;2000</div></div>
+				<div class="ratioLine" style="width:50%;"><div class="ratioLineHeight">&nbsp;4000</div></div>
+				<div class="ratioLine" style="width:75%;"><div class="ratioLineHeight">&nbsp;6000</div></div>
+				<div class="ratioLine" style="width:100%;margin-bottom: 30px;"><div class="ratioLineHeight">&nbsp;8000</div></div>
+
+			</div>
+		</td>					
+	</tr>
+	<script>
+	ShowBar(brand);
+	DrawRatio();	
+	</script>
+	</table>
+	<div class="floatBtn">
+		<img data-html2canvas-ignore id="downloadFigure" style="width: 100px;" onclick="DownloadFigure('GB5')" src="../MAINPIC/savefigure.svg">
+	  </div>
+	<p id="author"></p>	
+		
+<script>
+    
+    
+	
+</script>
+
+  </body>
+</html>
+
+
+
+
+
+
