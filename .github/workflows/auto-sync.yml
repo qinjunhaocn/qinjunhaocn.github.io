@@ -16,22 +16,22 @@ jobs:
           ref: "main"
 
       - run: |
-          mkdir -p /tmp/
-          > /tmp/urls.txt
-          echo https://www.socpk.com >> /tmp/urls.txt
-          echo https://www.socpk.com/cpucurve/gb6/ >> /tmp/urls.txt
-          echo https://www.socpk.com/gpucurve/ >> /tmp/urls.txt
-          echo https://www.socpk.com/laptopgpucurve/ >> /tmp/urls.txt
-          echo https://www.socpk.com/game/ >> /tmp/urls.txt
-          echo https://www.socpk.com/allperf/ >> /tmp/urls.txt
-          echo https://www.socpk.com/cpu/ >> /tmp/urls.txt
-          echo https://www.socpk.com/gpu/ >> /tmp/urls.txt
-          echo https://www.socpk.com/cpueffcrank/ >> /tmp/urls.txt
-          echo https://www.socpk.com/geekbench6/ >> /tmp/urls.txt
-          echo https://www.socpk.com/geekbench5/ >> /tmp/urls.txt
-          echo https://www.socpk.com/gfx/ >> /tmp/urls.txt
-          echo https://www.socpk.com/3dmwle/ >> /tmp/urls.txt
-          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --reject "*.ttf" --no-host-directories --input-file /tmp/urls.txt
+          mkdir -p tmp/
+          > tmp/urls.txt
+          echo https://www.socpk.com/cpucurve/gb6/ >> tmp/urls.txt
+          echo https://www.socpk.com/gpucurve/ >> tmp/urls.txt
+          echo https://www.socpk.com/laptopgpucurve/ >> tmp/urls.txt
+          echo https://www.socpk.com/game/ >> tmp/urls.txt
+          echo https://www.socpk.com/allperf/ >> tmp/urls.txt
+          echo https://www.socpk.com/cpu/ >> tmp/urls.txt
+          echo https://www.socpk.com/gpu/ >> tmp/urls.txt
+          echo https://www.socpk.com/cpueffcrank/ >> tmp/urls.txt
+          echo https://www.socpk.com/geekbench6/ >> tmp/urls.txt
+          echo https://www.socpk.com/geekbench5/ >> tmp/urls.txt
+          echo https://www.socpk.com/gfx/ >> tmp/urls.txt
+          echo https://www.socpk.com/3dmwle/ >> tmp/urls.txt
+          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --reject "*.ttf" --no-host-directories --input-file tmp/urls.txt
+          rm -rf tmp/
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
