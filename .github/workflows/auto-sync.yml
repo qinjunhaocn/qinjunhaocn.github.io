@@ -30,6 +30,7 @@ jobs:
           echo https://www.socpk.com/geekbench5/ >> tmp/urls.txt
           echo https://www.socpk.com/gfx/ >> tmp/urls.txt
           echo https://www.socpk.com/3dmwle/ >> tmp/urls.txt
+          rm -rf tmp/
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
