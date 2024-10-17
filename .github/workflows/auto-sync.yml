@@ -32,6 +32,9 @@ jobs:
           echo https://www.socpk.com/gfx/ >> /tmp/urls.txt
           echo https://www.socpk.com/3dmwle/ >> /tmp/urls.txt
           wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --reject "*.ttf" --no-host-directories --input-file /tmp/urls.txt
-          rm /tmp/
-
-      - uses: actions4git/add-commit-push@v1
+          rm -rf /tmp/
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "auto sync"
+          git push origin main
