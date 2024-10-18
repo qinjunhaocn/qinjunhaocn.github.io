@@ -1,8 +1,6 @@
 body {
-    background: #000;
     margin: 0;
     padding-top: 60px;
-    max-width: 200vh;
     box-sizing: border-box;
 
     display: flex;
@@ -10,6 +8,7 @@ body {
     align-items: center;
     row-gap: 30px;
 
+    background: #000;
     color: #fff;
 }
 
@@ -19,12 +18,15 @@ body {
 } */
 
 .title {
+    align-self: center;
+
     display: flex;
     flex-direction: column;
-    align-self: center;
     align-items: center;
+    justify-content: center;
     row-gap: 10px;
 
+    text-align: center;
     font-size: 70px;
     font-weight: bold;
 }
@@ -46,17 +48,18 @@ body {
 /* -------------------------------- */
 
 .card {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #494949;
-    transition: background-color 0.3s;
-    cursor: pointer;
     box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #494949;
+    transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -72,17 +75,22 @@ body {
 .cardWide {
     height: 300px;
     width: 600px;
+    max-width: 100vw;
+    max-height: 50vw;
 }
 
 .cardWideTitle {
     margin-bottom: 15px;
     font-size: 36px;
     font-weight: bold;
+    text-align: center;
 }
 
 .cardSquare {
     height: 300px;
     width: 300px;
+    max-width: 100vw;
+    max-height: 100vw;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -91,6 +99,7 @@ body {
     margin-top: 15px;
     color: #888;
     font-size: 24px;
+    text-align: center;
     /* font-family: Bahnschrift-VF; */
 }
 
