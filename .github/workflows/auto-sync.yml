@@ -18,6 +18,7 @@ jobs:
       - run: |
           mkdir -p tmp/
           > tmp/urls.txt
+          echo https://www.socpk.com/cpucurve/ >> tmp/urls.txt
           echo https://www.socpk.com/cpucurve/gb6/ >> tmp/urls.txt
           echo https://www.socpk.com/gpucurve/ >> tmp/urls.txt
           echo https://www.socpk.com/laptopgpucurve/ >> tmp/urls.txt
@@ -30,7 +31,8 @@ jobs:
           echo https://www.socpk.com/geekbench5/ >> tmp/urls.txt
           echo https://www.socpk.com/gfx/ >> tmp/urls.txt
           echo https://www.socpk.com/3dmwle/ >> tmp/urls.txt
-          wget --convert-links --adjust-extension --page-requisites --no-parent --reject "*.ttf" --no-host-directories --verbose --input-file tmp/urls.txt || true
+          echo https://www.socpk.com/log/ >> tmp/urls.txt
+          wget --convert-links --adjust-extension --page-requisites --no-parent --reject "*.ttf" --no-host-directories --verbose --tries 3 --connect-timeout 30 --input-file tmp/urls.txt || true
           rm -rf tmp/
           git config user.name github-actions
           git config user.email github-actions@github.com
