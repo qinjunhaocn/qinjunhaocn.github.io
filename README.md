@@ -1,4 +1,4 @@
-一个socpk.com的镜像。每天自动更新1次。
+一个socpk.com的镜像。每天自动同步1次。
 
 源地址：[socpk.com](https://socpk.com)
 
