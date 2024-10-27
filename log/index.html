@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<link href="layout.css?12" rel="stylesheet" />	-->
+<link rel="icon" href="../MAINPIC/favicon.ico">
+<link href="../cpucurve/layout.css%3F12.css" rel="stylesheet" />
+<title>更新记录</title>
+<style>
+    a{
+        color: #AAAAAA;
+    }
+    p{
+        color: #AAAAAA;
+    }
+    ul{
+        color: #AAAAAA;
+        /*font-size: 14px;*/
+        margin-top: -1% ; 
+        /*font-weight: bold;*/   
+    }
+
+</style>
+</head>
+
+<body style="background:black" >
+    <p class="downBtn" onclick="ChangeView('back')"><b>&lt;</b></p> 
+<div style="padding:0% 2%;">
+    <p id="caption" style="text-align:center"><b>能效曲线更新记录</b></p> 
+    <p style="color:black">更新内容：修复了一些已知问题。提高按钮稳定性、优化曲线流畅度</p><br>
+
+</div>
+<ul id="list">
+        <li><a style="font-weight:bold">2024-10-09</a><ol> 
+    <li>更新天玑9400能效曲线</li>
+    <br> 
+    </ol>
+    <li><a style="font-weight:bold">2024-09-27</a><ol> 
+    <li>重测A18能效曲线</li>
+    <li>重测A18 Pro能效曲线</li>
+    <li>GB6能效曲线Y轴最大值调整为10000</li>
+    <br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2024-09-19</a><ol> 
+    <li>更新A18能效曲线</li>
+    <li>更新A18 Pro能效曲线</li>
+    <br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2024-09-17</a><ol> 
+    <li>重测骁龙8Gen3 SNL能效曲线 <a style="color:#359ABA" onclick="showAlert('复测时发现，原机主板存在漏电，数据作废，已在更换全新机后复测SNL能效。')">说明</a></li>
+    <br> 
+    </ol>
+    
+    
+    <li><a style="font-weight:bold">2024-09-04</a><ol> 
+    <li>更新天玑9200+能效曲线</li>
+    <li>更新天玑9000能效曲线</li>
+    <li>更新天玑8300Ultra能效曲线</li>
+    <li>更新天玑8200能效曲线</li>
+    <li>更新天玑8100能效曲线</li>
+    <li>更新天玑1200能效曲线</li>
+    <li>更新骁龙8 Gen2能效曲线</li>
+    <li>更新骁龙8+ Gen1能效曲线</li>
+    <li>更新骁龙8 Gen1能效曲线</li>
+    <li>更新骁龙888能效曲线</li>
+    <li>更新骁龙7+ Gen2能效曲线</li>
+    <li>更新骁龙780G能效曲线</li>
+    <br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2024-07-10</a><ol> 
+    <li>新增3DMark SNL能效曲线</li>
+    <li>更新骁龙8 Gen3能效曲线</li>
+    <li>更新A17 Pro能效曲线</li>
+    <li>更新天玑9300+能效曲线</li>
+    <li>更新Tensor G3能效曲线</li>
+    <li>更新Exynos 2400能效曲线</li>
+    <br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2024-05-27</a><ol> 
+    <li>更新麒麟9000WM能效曲线</li>
+    <li>更新麒麟9000WL能效曲线</li><br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2024-04-29</a><ol> 
+    <li>更新麒麟9010能效曲线</li>
+    <li>更新麒麟9000s完整能效曲线</li> 
+    <li>更新骁龙820能效曲线</li>
+    <li>更新骁龙810能效曲线</li>
+    <li>更新骁龙808能效曲线</li>
+    <li>更新骁龙805能效曲线</li>
+    <li>更新Exynos 7420能效曲线</li>
+    <li>更新苹果A9(三星工艺)能效曲线</li>
+    <li>更新苹果A9(台积电工艺)能效曲线</li>
+    <li>更新苹果A8能效曲线</li><br>
+    
+    </ol>
+    
+    <li><a style="font-weight:bold">2024-03-14</a><ol> 
+    <li>更新骁龙7+ Gen3能效曲线</li><br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2024-01-17</a><ol> 
+    <li>更新麒麟9000SL能效曲线</li> 
+    <li>更新麒麟8000能效曲线</li><br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2023-12-02</a><ol> 
+    <li>更新天玑8300Ultra能效曲线</li><br> 
+    </ol>
+    
+    
+<li><a style="font-weight:bold">2023-11-15</a><ol> 
+    <li>更新天玑9300能效曲线</li><br> 
+    </ol>
+    
+    <li><a style="font-weight:bold">2023-11-07</a><ol>
+    <li>修复GB5天玑1200曲线错误</li><br>
+    </ol>
+
+
+
+
+    <li><a style="font-weight:bold">2023-11-05</a><ol>
+    <!--<li>数据库后端重大更新。全面引入自动化作图，该功能可以一键抓取源数据拟合全部曲线。相比之前的人工作图，不需要手动填数据和排版。</li><br>-->
+    <!--<li>换用Sigmoid函数拟合GPU曲线。在自动化作图的测试阶段由于抓取程序bug而误使用了Log函数拟合GPU曲线（2023-10-31至2023-11-05），此次正式引入自动化作图后已修正为Sigmoid函数。两种函数差异如图：<br>-->
+    <!--<img src="logpic/gpu_log.jpg"><img src="logpic/gpu_sig.jpg"><br>-->
+    <!--CPU曲线始终使用Sigmoid函数，不受影响</li><br>-->
+    <li>使用小米14零售机+正式版HyperOS 1.0.14复测8Gen3数据，并通过删除温控和将内存定频在4266MHz改善了GPU超频903MHz后的成绩。</li>
+    <li>为socpk的能效曲线加入更新日志功能。</li>
+<br></ol>
+
+</ul>
+
+
+<script>
+
+		var contentId=document.getElementById('list');
+		var captionId=document.getElementById('caption');
+		var contentSize=40000/document.body.clientWidth; 
+		var captionSize=80000/document.body.clientWidth; 
+		contentId.style.fontSize=contentSize+'px';
+		captionId.style.fontSize=captionSize+'px';
+		function showAlert(content){
+		    alert(content);
+		}
+
+
+</script>
+<script src="../cpucurve/main.js%3F2"></script>
+  </body>
+</html> 
